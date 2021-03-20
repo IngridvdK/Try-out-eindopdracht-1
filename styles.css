@@ -1,0 +1,129 @@
+body{
+    font-family: "Segoe UI Semilight", Helvetica, sans-serif;
+}
+h1 {
+    font-family: "Quicksand", Helvetica, sans-serif;
+    font-size: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 3%;
+
+}
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 150px 80px 1fr 150px;
+    grid-gap: 3px;
+    height: 1500px;
+    margin: 15px;
+    grid-template-areas: 
+    "header"
+    "nav"
+    "main"
+    "footer";
+}
+header {  
+    grid-area: header;
+    background-color: greenyellow;
+}
+nav {
+    grid-area: nav;
+    background-color: indianred;
+}
+.nav-menu {
+    display: inline;
+    background-color: white;
+    border: 3px solid darkgreen;
+    border-radius: 2px;
+    color: darkgreen;
+    padding: 15px;
+    list-style-type: none;
+    display: flex-inline;
+    justify-content: center;
+    align-items: center;
+}
+a:link {
+    color: darkgreen;
+    text-decoration: none;
+}
+.nav-menu:hover {
+    background-color: darkgreen;
+    color: whitesmoke;
+}
+
+main {
+    grid-area: main;
+    background-color:white;
+}
+footer {
+    grid-area: footer;
+    background-color: hotpink;
+}
+blockquote {
+    font-size: 27px;
+	margin: 1em 3em;
+    background-color:#fff ;
+	border-left: 4px solid grey;
+	padding: 1em 1em;
+}
+p {
+    padding: 0px 50px;
+    font-size: 25px;
+}
+.search-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: rgba(12, 209, 12, 0.829);
+    margin: 20px;
+}
+input {
+    padding: 10px;
+    margin: 5px;
+}
+table, th, td {
+    border-collapse: collapse;
+    
+}    
+table {
+    margin: 0px 50px;    
+    justify-content: center;
+} 
+.table-plus{
+    width: 90%;
+    height: 300px;
+    overflow-y: auto;
+}
+tr:hover {
+    background-color: #f5f5f5;
+}
+th, td {   
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+    font-size: 22px;
+}
+th {
+    background-color: #4CAF50;
+    color: white;
+    text-align: left;
+}
+.title-table {
+    font-size: 22px;
+    font-family: "Quicksand", Helvetica, sans-serif;
+}
+
+@media (min-width: 1024px) {
+    .grid {
+        grid-template-columns: 40px 1fr 40px;
+        grid-template-rows: 300px 100px 1fr 300px;
+        grid-gap: 5px;
+        height: 2000px;
+        grid-template-areas: 
+        ". header."
+        ". nav ."
+        ". main ."
+        ". footer .";
+    }
+}
